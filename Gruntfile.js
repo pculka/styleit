@@ -19,7 +19,7 @@ module.exports = function (grunt) {
             prod: {
                 cleancss: true,
                 files: {
-                    'dist/styleit.css': ['src/styleit.less']
+                    'dist/styleit.min.css': ['src/styleit.less']
                 }
 
             }
