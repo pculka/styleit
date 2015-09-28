@@ -24,7 +24,16 @@ module.exports = function (grunt) {
 
             }
         },
-
+        imagemin: {
+            static: {                          // Target
+                options: {                       // Target options
+                    optimizationLevel: 3
+                },
+                files: {                         // Dictionary of files
+                    'dist/styleit.png': 'src/styleit.png'
+                }
+            }
+        },
         watch: {
             dist: {
                 files: ['src/styleit.js', 'src/styleit.less'],
@@ -36,8 +45,9 @@ module.exports = function (grunt) {
     // Main tasks
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.registerTask('default', ['less', 'uglify']);
+    grunt.registerTask('default', ['less', 'uglify', 'imagemin']);
     grunt.registerTask('w', ['watch']);
 
 };

@@ -3,11 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>StyleIt! Demo Page</title>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="styleit.min.js"></script>
     <link rel="stylesheet" href="styleit.min.css">
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $('.styleit').styleIt({
+                css3: false,
+                imageSource: "sprite.png"
+            });
+        })
+    </script>
 </head>
 <body>
 <div class="container">
@@ -22,7 +31,7 @@
             <p>Here you can find demo for StyleIt!</p>
             <p class="radioButtons">
 
-                <label for="radio-1"><input type="radio" name="radio[]" id="radio-1">Radio1</label>
+                <label for="radio-1"><input type="radio" name="radio[]" id="radio-1" class="styleit">Radio1</label>
             </p>
             <p class="checkBoxes">
             <label for="checkbox-1"><input type="checkbox" name="checkbox" id="checkbox-1">Checkbox</label>
